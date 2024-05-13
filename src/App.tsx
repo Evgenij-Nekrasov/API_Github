@@ -1,5 +1,18 @@
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import FavoritesPage from "./pages/FavoritesPage";
+import Navigation from "./components/Navigation";
+
 function App() {
-   return <h1 className="text-xl underline">Hello world!</h1>;
+   return (
+      <>
+         <Navigation />
+         <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/favorites" element={<FavoritesPage />} />
+         </Routes>
+      </>
+   );
 }
 
 export default App;
